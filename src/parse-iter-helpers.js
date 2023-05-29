@@ -21,4 +21,5 @@ const errorsByCustomer = await AsyncIterator.from(byLine(readable))
     return acc
   }, {})
 
+console.log('Errors by customer:')
 console.log(errorsByCustomer)

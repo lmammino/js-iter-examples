@@ -9,13 +9,11 @@ if (!filename) {
 
 const readable = createReadStream(filename, { encoding: 'utf-8' })
 
-let errorCount = 0
 const errorsByCustomer = {}
 
 for await (const line of byLine(readable)) {
   const message = line === '' ? {} : JSON.parse(line)
   if (message.error === 'ERR_SYS_FCKD') {
-    errorCount++
     if (!errorsByCustomer[message.customerId]) {
       errorsByCustomer[message.customerId] = 0
     }
@@ -23,12 +21,5 @@ for await (const line of byLine(readable)) {
   }
 }
 
-let formattedErrorCount = []
-for (const customerId in errorsByCustomer) {
-  formattedErrorCount.push({ customerId, errorCount: errorsByCustomer[customerId] })
-}
-formattedErrorCount = formattedErrorCount.sort((a, b) => b.errorCount - a.errorCount)
-
-console.log(`Total errors: ${errorCount}`)
-console.log('\nErrors by customer:')
-console.table(formattedErrorCount)
+console.log('Errors by customer:')
+console.log(errorsByCustomer)
