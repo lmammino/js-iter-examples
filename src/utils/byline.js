@@ -5,4 +5,7 @@ export async function * byLine (asyncIterable) {
     remainder = lines.pop()
     yield * lines
   }
+  if (remainder.length > 0) {
+    yield remainder
+  }
 }

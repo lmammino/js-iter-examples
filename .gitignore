@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 
+logs*.jsonl
 logs*.txt
