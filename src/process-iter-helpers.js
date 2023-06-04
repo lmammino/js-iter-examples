@@ -4,7 +4,7 @@ import { byLine } from './utils/byline.js'
 
 const filename = process.argv[2]
 if (!filename) {
-  console.error('Please provide a filename. Usage: node parse-iter.js <filename>')
+  console.error(`Please provide a filename. Usage: ${process.argv[0]} ${process.argv[1]} <filename>`)
   process.exit(1)
 }
 
