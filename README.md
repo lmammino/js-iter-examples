@@ -85,6 +85,13 @@ This is a version of the previous script using `.map()`, `.filter()`, and `.redu
 Check it out and compare the code with the previous implementation.
 
 
+### [`process-readable-streams-helpers.js`](./src/process-readable-streams-helpers.js)
+
+This is another version of the previous script that uses `.map()`, `.filter()`, and `.reduce()` but not through Async Iterators. Instead it uses a similar functionality through Node.js streams.
+
+Thanks to [@ErickWendel](https://github.com/ErickWendel), for the awesome suggestion!
+
+
 ## Additional material
 
 If you are interested in these kinds of topics, you might also enjoy:
