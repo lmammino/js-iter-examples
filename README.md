@@ -89,7 +89,7 @@ Check it out and compare the code with the previous implementation.
 
 This is another version of the previous script that uses `.map()`, `.filter()`, and `.reduce()` but not through Async Iterators. Instead it uses a similar functionality through Node.js streams.
 
-Thanks to [@ErickWendel](https://github.com/ErickWendel), for the awesome suggestion!
+❤️ Thanks to [@ErickWendel](https://github.com/ErickWendel), for the awesome suggestion on this one!
 
 
 ## Additional material
